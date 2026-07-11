@@ -3,333 +3,103 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="StepLAB 儿童智能步态监测鞋垫，通过足底压力传感、IMU 步态识别、训练反馈与复测报告，帮助家长持续看见孩子的步态变化。">
-  <title>StepLAB | 儿童智能步态监测鞋垫</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="StepLAB 通过足底压力感知与步态识别，持续记录儿童真实行走中的受力和步态变化，让每一步都成为可追踪的成长依据。">
+  <meta name="keywords" content="儿童智能鞋垫,儿童步态监测,足底压力监测,儿童足部成长,智能穿戴,StepLAB">
+  <meta name="theme-color" content="#fff9fa">
+  <title>StepLAB｜儿童智能监测鞋垫</title>
+  <style>
+    @font-face{font-family:"Smiley Sans";src:url("assets/md-source/SmileySans-Oblique.woff2") format("woff2");font-display:swap;font-style:normal;font-weight:100 900}
+    :root{--ink:#2d2931;--muted:#746d77;--pink:#ee8fb1;--pink-dark:#d96c95;--lilac:#b9aceb;--cream:#fffaf8;--line:rgba(67,46,61,.12);--shadow:0 24px 70px rgba(120,73,94,.13)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--cream);color:var(--ink);font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;line-height:1.65;overflow-x:hidden} a{color:inherit;text-decoration:none} button{font:inherit} .wrap{width:min(1160px,calc(100% - 48px));margin:auto}.eyebrow{margin:0 0 17px;color:var(--pink-dark);font-size:12px;letter-spacing:.16em;font-weight:700}.eyebrow::before{content:"";display:inline-block;width:24px;height:1px;background:currentColor;vertical-align:middle;margin:0 10px 3px 0}.title{font-size:clamp(30px,4vw,51px);line-height:1.18;letter-spacing:-.055em;margin:0;max-width:720px}.lead{color:var(--muted);font-size:16px;max-width:600px}.section{padding:136px 0;position:relative}.btn{border:0;display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:14px 23px;font-weight:700;transition:.3s ease;cursor:pointer}.btn:hover{transform:translateY(-3px)}.btn-primary{background:var(--pink);color:#fff;box-shadow:0 12px 25px rgba(220,101,145,.24)}.btn-secondary{background:#fff;border:1px solid var(--line);color:#514754}.arrow{font-size:18px;line-height:1}
+    .nav{height:72px;position:fixed;z-index:20;top:0;left:0;right:0;transition:.35s}.nav.is-scrolled{background:rgba(255,250,248,.83);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav-in{height:100%;display:flex;align-items:center;justify-content:space-between;gap:25px}.brand img{width:126px;display:block;filter:sepia(.25) saturate(1.9) hue-rotate(289deg) brightness(1.12)}.links{display:flex;gap:24px;font-size:13px;color:#625963}.links a{position:relative}.links a:after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:1px;background:var(--pink);transition:.25s}.links a:hover:after{width:100%}.nav .btn{padding:9px 17px;font-size:13px}.menu{display:none;background:none;border:0;font-size:25px;color:var(--ink)}
+    .hero{min-height:92vh;display:grid;align-items:center;position:relative;padding:122px 0 66px;background:radial-gradient(circle at 76% 44%,rgba(224,207,255,.55),transparent 19%),radial-gradient(circle at 62% 78%,rgba(252,183,204,.3),transparent 23%),linear-gradient(117deg,#fffdfb 0%,#fff7f8 54%,#f9f3ff 100%);isolation:isolate}.hero:before{content:"";position:absolute;inset:0;opacity:.26;background-image:linear-gradient(rgba(130,96,130,.11) 1px,transparent 1px),linear-gradient(90deg,rgba(130,96,130,.11) 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(to bottom,black,transparent 72%);z-index:-1}.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:16px;align-items:center}.hero h1{font-size:clamp(48px,6.1vw,80px);letter-spacing:-.085em;line-height:1.04;margin:0 0 25px;max-width:600px}.hero h1 em{font-style:normal;color:var(--pink-dark)}.hero .lead{font-size:17px;margin:0 0 18px}.hero .sublead{max-width:540px;color:#8b828c;font-size:14px}.actions{display:flex;gap:12px;margin:31px 0 32px;flex-wrap:wrap}.tags{display:flex;flex-wrap:wrap;gap:8px}.tags span{font-size:12px;color:#786c77;border:1px solid rgba(212,152,177,.42);background:rgba(255,255,255,.45);border-radius:99px;padding:6px 11px}.product-stage{height:500px;position:relative;display:grid;place-items:center}.product-stage:before{content:"";position:absolute;width:83%;aspect-ratio:1;border-radius:50%;border:1px solid rgba(189,150,196,.38);box-shadow:inset 0 0 60px rgba(239,161,191,.15),0 0 0 34px rgba(255,255,255,.26);transform:rotate(-18deg)}.product-stage:after{content:"";position:absolute;width:58%;height:34px;border-radius:50%;background:rgba(211,120,158,.22);filter:blur(18px);bottom:61px}.product-stage img{width:130%;max-width:none;position:relative;z-index:2;filter:drop-shadow(0 28px 25px rgba(71,39,59,.22));animation:float 6s ease-in-out infinite}.signal{position:absolute;z-index:3;border:1px solid rgba(185,111,150,.28);background:rgba(255,255,255,.7);backdrop-filter:blur(8px);width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:var(--pink-dark);font-size:18px;box-shadow:0 10px 22px rgba(96,54,78,.1)}.s1{top:76px;right:50px}.s2{bottom:104px;left:24px}@keyframes float{50%{transform:translateY(-12px) rotate(-.8deg)}}
+    .why{background:#fff}.split{display:grid;grid-template-columns:.92fr 1.08fr;gap:10%;align-items:start}.timeline{margin-top:7px;padding:2px 0 2px 34px;border-left:1px solid rgba(220,130,165,.35)}.time{position:relative;padding:0 0 34px}.time:last-child{padding:0}.time:before{content:"";position:absolute;width:9px;height:9px;border:2px solid var(--pink);border-radius:50%;background:white;left:-39px;top:8px}.time b{font-size:16px;display:block}.time p{font-size:14px;color:var(--muted);margin:5px 0 0}.time strong{font-weight:600;color:var(--pink-dark);font-size:12px;letter-spacing:.13em}.capability{background:linear-gradient(180deg,#fff 0%,#fdf7fa 100%)}.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:58px;border-top:1px solid var(--line);border-left:1px solid var(--line)}.feature{min-height:265px;padding:27px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.44);transition:.35s}.feature:hover{background:#fff;transform:translateY(-6px);box-shadow:0 18px 35px rgba(121,76,100,.07)}.visual{width:52px;height:52px;display:grid;place-items:center;border-radius:18px;background:linear-gradient(135deg,#ffe7ee,#eee9ff);font-size:21px;color:#ca6e95;margin-bottom:31px}.feature h3{font-size:18px;margin:0 0 9px;letter-spacing:-.03em}.feature p{font-size:13px;color:var(--muted);margin:0}.data-line{height:32px;margin:25px 0 0;display:flex;align-items:end;gap:4px}.data-line i{display:block;width:8px;background:var(--pink);border-radius:8px 8px 2px 2px;opacity:.8}.data-line i:nth-child(1){height:27%}.data-line i:nth-child(2){height:56%}.data-line i:nth-child(3){height:39%}.data-line i:nth-child(4){height:85%}.data-line i:nth-child(5){height:57%}
+    .workflow{background:#302933;color:#fff;overflow:hidden}.workflow:before{content:"";position:absolute;width:670px;height:670px;border-radius:50%;background:radial-gradient(circle,rgba(232,154,188,.24),transparent 63%);right:-210px;top:-200px}.workflow .lead{color:#c9c0c9}.process{display:grid;grid-template-columns:repeat(5,1fr);position:relative;margin-top:65px}.process:before{content:"";height:1px;position:absolute;top:36px;left:5%;right:5%;background:linear-gradient(90deg,rgba(244,156,190,.5),rgba(199,180,236,.7))}.step{position:relative;padding:0 14px}.step-num{width:73px;height:73px;border:1px solid rgba(255,255,255,.25);border-radius:50%;background:#302933;display:grid;place-items:center;font-family:Georgia,serif;font-size:24px;position:relative;z-index:1;color:#ffc0d6}.step h3{font-size:15px;margin:23px 0 7px}.step p{font-size:12px;margin:0;color:#cbc3cb}.insight{background:#fbf7ff}.insight-grid{display:grid;grid-template-columns:1fr 1.08fr;gap:90px;align-items:center}.phone{width:min(280px,80%);margin:auto;border:8px solid #fff;border-radius:38px;padding:15px;background:linear-gradient(160deg,#f8dfe9,#e8e5ff);box-shadow:0 30px 60px rgba(102,65,95,.23);transform:rotate(-7deg)}.phone-head{display:flex;justify-content:space-between;font-size:10px;color:#7e6680}.phone h4{font-size:17px;margin:25px 0 12px}.chart{height:105px;background:rgba(255,255,255,.68);border-radius:15px;position:relative;overflow:hidden}.chart svg{width:100%;height:100%}.stat-row{display:flex;gap:9px;margin-top:10px}.stat{background:#fff;border-radius:13px;padding:9px;flex:1;font-size:10px;color:#7d7380}.stat b{display:block;font-size:15px;color:#4f3e4b}.insight-list{margin:30px 0 0;padding:0;list-style:none}.insight-list li{border-top:1px solid var(--line);padding:16px 0;display:flex;gap:16px}.insight-list span{color:var(--pink-dark);font-family:Georgia,serif;font-size:18px}.insight-list b{display:block;font-size:15px}.insight-list small{color:var(--muted);font-size:13px}.scenes{background:#fff}.scene-grid{display:grid;grid-template-columns:1.1fr .9fr .9fr;gap:16px;margin-top:55px}.scene{min-height:315px;border-radius:24px;padding:28px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}.scene:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 25%,rgba(48,30,43,.58))}.scene>*{position:relative;z-index:1}.scene:nth-child(1){background:linear-gradient(145deg,#dbc3f3,#f6b6c8)}.scene:nth-child(2){background:linear-gradient(145deg,#f9d5d9,#d5e8e1)}.scene:nth-child(3){background:linear-gradient(145deg,#e2ddfb,#c7cde9)}.scene .orb{position:absolute;width:150px;height:150px;border-radius:50%;top:20px;right:20px;background:rgba(255,255,255,.3);filter:blur(1px)}.scene .mini-insole{position:absolute;width:80px;height:170px;border-radius:52% 52% 40% 40%;background:rgba(255,255,255,.65);top:50px;left:58px;transform:rotate(25deg);box-shadow:inset -12px -8px 20px rgba(139,99,155,.15)}.scene h3{margin:0;font-size:20px}.scene p{margin:4px 0 0;font-size:13px;color:#fff}.privacy{background:#fff8fa}.privacy-card{display:grid;grid-template-columns:.85fr 1.15fr;border:1px solid var(--line);border-radius:26px;overflow:hidden;margin-top:55px;background:white}.privacy-lock{padding:48px;background:linear-gradient(145deg,#f4d9e9,#dfdaf9);display:grid;place-items:center}.lock{width:118px;height:102px;border:6px solid rgba(126,87,137,.67);border-radius:20px;position:relative}.lock:before{content:"";position:absolute;width:54px;height:54px;border:6px solid rgba(126,87,137,.67);border-bottom:0;border-radius:50px 50px 0 0;left:26px;top:-58px}.lock:after{content:"✦";position:absolute;inset:0;display:grid;place-items:center;color:#d56e98;font-size:28px}.privacy-copy{padding:42px 48px}.privacy-copy h3{font-size:28px;line-height:1.25;margin:0 0 11px}.checks{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 20px;margin-top:25px}.checks div{font-size:13px;color:#665e68}.checks i{color:#df7fa5;font-style:normal;margin-right:8px}.faq{background:#fff}.faq-layout{display:grid;grid-template-columns:.68fr 1.32fr;gap:90px}.faq-list{border-top:1px solid var(--line)}details{border-bottom:1px solid var(--line);padding:18px 0}summary{cursor:pointer;list-style:none;font-size:16px;font-weight:600;display:flex;justify-content:space-between;gap:20px}summary::-webkit-details-marker{display:none}summary:after{content:"+";font-size:22px;font-weight:400;color:var(--pink-dark);line-height:.8}details[open] summary:after{content:"−"}details p{font-size:14px;color:var(--muted);margin:13px 30px 0 0}.cta{padding:104px 0;background:radial-gradient(circle at 75% 35%,rgba(253,224,235,.8),transparent 27%),linear-gradient(115deg,#f4eafc,#fff1f4);overflow:hidden}.cta-box{position:relative;min-height:335px;border-radius:28px;border:1px solid rgba(196,138,166,.22);background:rgba(255,255,255,.48);padding:60px;overflow:hidden}.cta-box h2{font-size:clamp(35px,5vw,62px);max-width:630px;line-height:1.08;letter-spacing:-.065em;margin:0}.cta-box p{color:var(--muted);max-width:480px}.cta-box img{position:absolute;width:440px;right:-70px;bottom:-125px;opacity:.83;filter:drop-shadow(0 20px 23px rgba(91,48,66,.17))}.footer{background:#302933;color:#d2cbd1;padding:45px 0 25px}.footer-top{display:flex;justify-content:space-between;align-items:center;gap:30px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.14)}.footer img{width:130px;filter:sepia(.7) saturate(1.3) hue-rotate(282deg) brightness(1.8)}.footer-links{display:flex;gap:22px;font-size:12px}.fine{font-size:11px;color:#a79da7;display:flex;justify-content:space-between;gap:15px;padding-top:20px}.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.in{opacity:1;transform:none}
+    @media(max-width:900px){.links{display:none}.menu{display:block}.nav .header-cta{display:none}.hero-grid,.split,.insight-grid,.faq-layout{grid-template-columns:1fr;gap:45px}.hero{padding-top:135px}.hero-copy{order:2}.product-stage{height:390px;order:1}.product-stage img{width:105%}.feature-grid{grid-template-columns:repeat(2,1fr)}.process{grid-template-columns:repeat(2,1fr);gap:36px}.process:before{display:none}.scene-grid{grid-template-columns:1fr 1fr}.scene:first-child{grid-column:span 2}.privacy-card{grid-template-columns:1fr}.privacy-lock{padding:70px}.faq-layout{gap:35px}.cta-box img{opacity:.24}.section{padding:90px 0}}
+    @media(max-width:560px){.wrap{width:min(100% - 32px,1160px)}.section{padding:70px 0}.hero{min-height:auto;padding-bottom:50px}.hero h1{font-size:47px}.product-stage{height:300px}.product-stage img{width:125%}.s1{top:20px}.s2{bottom:24px}.feature-grid{grid-template-columns:1fr}.feature{min-height:auto}.process{grid-template-columns:1fr}.scene-grid{grid-template-columns:1fr}.scene:first-child{grid-column:auto}.privacy-copy{padding:31px 24px}.checks{grid-template-columns:1fr}.cta-box{padding:40px 25px;min-height:315px}.footer-top,.fine{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap;gap:12px 17px}.title{font-size:34px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+
+    /* Visual language derived from the supplied reference: sunny field, cobalt type,
+       pink waves and large friendly editorial blocks. */
+    :root{--ink:#263baf;--muted:#5963a1;--pink:#f59eb1;--pink-dark:#df758e;--lilac:#d9d2ff;--cream:#fff9e8;--line:rgba(38,59,175,.2);--sun:#fff052}
+    body{background:var(--cream);font-family:"Smiley Sans","得意黑","PingFang SC","Microsoft YaHei",sans-serif}.eyebrow{color:#e77992;letter-spacing:.09em}.eyebrow::before{background:#263baf}.title,.hero h1{font-family:"Smiley Sans","得意黑","PingFang SC","Microsoft YaHei",sans-serif;color:#263baf;font-weight:900}.lead,.hero .sublead{color:#52609a}.nav{background:rgba(255,249,232,.76);backdrop-filter:blur(12px)}.nav.is-scrolled{background:rgba(255,249,232,.95);border-color:rgba(38,59,175,.14)}.brand img{width:138px;filter:none}.links{color:#263baf;font-weight:700}.links a:after{background:#ef90a9}.btn{border-radius:13px}.btn-primary{background:#2946c9;box-shadow:0 8px 0 #1e3295,0 15px 25px rgba(38,59,175,.2)}.btn-primary:hover{box-shadow:0 5px 0 #1e3295,0 12px 22px rgba(38,59,175,.18)}.btn-secondary{border:2px solid #2946c9;color:#2946c9;background:transparent}.hero{padding-top:126px;background:var(--sun);min-height:760px;overflow:hidden}.hero:before{opacity:1;inset:auto -4% -100px -4%;height:250px;background:#f6a4b6;mask-image:none;clip-path:ellipse(68% 100% at 50% 100%);background-image:none}.hero:after{content:"";position:absolute;z-index:-1;width:580px;height:580px;border-radius:50%;right:-105px;top:110px;background:#f7b4c5}.hero-grid{gap:0}.hero h1{font-size:clamp(48px,6.5vw,84px);line-height:.98;max-width:620px}.hero h1 em{color:#263baf;text-shadow:4px 4px 0 #f8b4c4}.hero .lead{font-size:17px;font-weight:600;max-width:525px}.hero .sublead{font-size:14px}.tags span{background:#fff9e8;border:0;color:#2946c9;font-weight:700;border-radius:8px;padding:7px 10px}.product-stage{height:550px}.product-stage:before{width:103%;aspect-ratio:1;background:#f49dae;border:0;box-shadow:none;transform:rotate(0);border-radius:46% 54% 47% 53% / 56% 48% 52% 44%}.product-stage:after{background:rgba(38,59,175,.24);bottom:77px}.product-stage img{width:132%;filter:drop-shadow(0 28px 18px rgba(86,45,86,.23));animation:float 6s ease-in-out infinite}.signal{border:0;background:#fff052;color:#2946c9;border-radius:13px;box-shadow:5px 5px 0 rgba(38,59,175,.18)}.why{background:#fff9e8;overflow:hidden}.why:after,.capability:after,.scenes:after{content:"";position:absolute;left:-5%;bottom:-80px;width:110%;height:140px;background:#f6a4b6;clip-path:ellipse(62% 72% at 50% 100%);z-index:0}.why .wrap,.capability .wrap,.scenes .wrap{position:relative;z-index:1}.timeline{border-left:2px dashed #f29ab0}.time:before{width:13px;height:13px;border:3px solid #263baf;background:#fff052;left:-42px}.time strong{color:#e77992}.time b{color:#263baf}.capability{background:#fff052;padding-bottom:175px}.feature-grid{border:0;gap:17px}.feature{min-height:285px;border:2px solid #263baf;border-radius:20px;background:#fff9e8;box-shadow:7px 7px 0 rgba(38,59,175,.85);padding:24px 21px}.feature:nth-child(2){background:#f7b1c0}.feature:nth-child(3){background:#d8d4ff}.feature:nth-child(4){background:#fdf4e5}.feature:hover{background:#fff;box-shadow:10px 12px 0 rgba(38,59,175,.85);transform:translate(-3px,-6px)}.visual{border-radius:12px;background:#fff052;color:#263baf}.feature h3{color:#263baf;font-weight:900}.feature p{color:#48558f;font-weight:600}.data-line i{background:#2946c9}.workflow{background:#2946c9}.workflow:before{background:radial-gradient(circle,rgba(255,240,82,.42),transparent 63%)}.workflow .title{color:#fff9e8}.workflow .lead{color:#dcdfff}.process:before{background:#fff052}.step-num{background:#2946c9;border:2px solid #fff052;color:#fff052}.step h3{font-weight:900}.insight{background:#f6a4b6}.phone{background:#fff9e8;border-color:#2946c9;border-width:7px;box-shadow:10px 12px 0 rgba(38,59,175,.7);transform:rotate(-5deg)}.phone h4,.stat b{color:#263baf}.chart{background:#fff}.insight-list{border-top:2px solid #263baf}.insight-list li{border-color:rgba(38,59,175,.24)}.insight-list span{color:#263baf}.insight-list b{color:#263baf}.insight-list small{color:#4c5791}.scenes{background:#fff9e8;padding-bottom:170px}.scene{border:2px solid #263baf;border-radius:22px;box-shadow:7px 7px 0 rgba(38,59,175,.85)}.scene:nth-child(1){background:#2946c9}.scene:nth-child(2){background:#f5a1b3}.scene:nth-child(3){background:#d8d4ff}.scene:before{background:linear-gradient(180deg,transparent 20%,rgba(38,59,175,.58))}.scene .orb{background:#fff052}.scene .mini-insole{background:#fff9e8}.privacy{background:#fff052}.privacy-card{border:2px solid #263baf;border-radius:24px;box-shadow:10px 10px 0 rgba(38,59,175,.85)}.privacy-lock{background:#f5a1b3}.lock,.lock:before{border-color:#263baf}.lock:after{color:#fff052}.privacy-copy h3{color:#263baf;font-weight:900}.checks div{color:#3f4d8e;font-weight:700}.checks i{color:#df758e}.faq{background:#fff9e8}.faq-list{border-color:#263baf}.faq details{border-color:rgba(38,59,175,.25)}summary{color:#263baf}summary:after{color:#e77992}.faq details p{color:#53609c}.cta{background:#f5a1b3;padding:118px 0}.cta-box{border:3px solid #263baf;background:#fff052;border-radius:30px;box-shadow:12px 12px 0 rgba(38,59,175,.85)}.cta-box h2{color:#263baf;font-family:"Smiley Sans","得意黑","PingFang SC","Microsoft YaHei",sans-serif;font-weight:900}.cta-box p{color:#435190;font-weight:600}.cta-box img{width:440px;right:-45px;bottom:-80px}.footer{background:#2946c9}.footer img{filter:none}.footer-top{border-color:rgba(255,255,255,.3)}.footer-links{color:#fff9e8;font-weight:700}.fine{color:#dcdfff}
+    @media(max-width:900px){.hero{min-height:auto}.product-stage{height:400px}.hero:after{width:420px;height:420px;right:-100px;top:80px}.feature-grid{gap:17px}.cta-box img{opacity:.52}}@media(max-width:560px){.hero{padding-top:118px}.hero:before{height:130px}.product-stage{height:310px}.feature-grid{gap:16px}.feature{box-shadow:5px 5px 0 rgba(38,59,175,.85)}.cta-box{box-shadow:7px 7px 0 rgba(38,59,175,.85)}.cta-box img{opacity:.22;width:370px}}
+    /* Interactive parent-app demonstration, scoped to the replaced insight area. */
+    #insight{background:#fff7e8;padding:104px 0;overflow:hidden}#insight .insight-grid{display:none}.sl-app-demo{display:grid;grid-template-columns:.75fr 1.25fr;gap:64px;align-items:center}.sl-app-copy h2{font-size:clamp(35px,4vw,59px);line-height:1.05;letter-spacing:-.06em;margin:0;color:#263baf}.sl-app-copy p{color:#53609c;font-size:16px}.sl-app-tabs{display:grid;gap:8px;margin-top:28px}.sl-app-tab{border:0;background:transparent;color:#263baf;text-align:left;padding:11px 14px;border-radius:12px;font:700 14px "Smiley Sans","PingFang SC",sans-serif;cursor:pointer}.sl-app-tab.active,.sl-app-tab:hover{background:#fff052;box-shadow:4px 4px 0 #2946c9}.sl-app-note{font-size:12px;color:#6a70a6;margin-top:22px}.sl-phone{width:min(410px,100%);height:700px;margin:auto;border:10px solid #263baf;border-radius:43px;background:#fffdf4;box-shadow:14px 15px 0 #2946c9;overflow:hidden;position:relative}.sl-phone:before{content:"";position:absolute;width:110px;height:22px;border-radius:0 0 16px 16px;left:calc(50% - 55px);top:0;background:#263baf;z-index:6}.sl-app-top{height:86px;background:linear-gradient(140deg,#fff052,#f7b3c2);padding:30px 18px 8px;color:#263baf}.sl-app-top small{font-size:10px;font-weight:800}.sl-app-top b{display:block;font-size:18px;line-height:1.1}.sl-app-screen{height:calc(100% - 140px);overflow:auto;padding:13px 14px 75px;scrollbar-width:none}.sl-app-screen::-webkit-scrollbar{display:none}.sl-sample{font-size:10px;color:#e17a97;letter-spacing:.08em;font-weight:800}.sl-status{display:flex;justify-content:space-between;align-items:center;background:#eef5ed;color:#39735a;padding:7px 9px;border-radius:10px;font-size:11px;font-weight:800;margin-bottom:12px}.sl-card{background:#fff;border:1.5px solid #d9ddf2;border-radius:16px;padding:13px;margin:10px 0;box-shadow:3px 4px 0 #dce0fb}.sl-card h4{font-size:15px;color:#263baf;margin:0 0 7px}.sl-card p{margin:0;color:#5c6698;font-size:11px;line-height:1.55}.sl-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.sl-metric{border-radius:12px;background:#f6f4ff;padding:10px;color:#59609a;font-size:10px}.sl-metric b{display:block;color:#263baf;font-size:18px;line-height:1.3}.sl-quality{background:linear-gradient(100deg,#fae3ed,#f1efff)}.sl-quality b{color:#263baf}.sl-pressure{display:flex;gap:12px;justify-content:center}.sl-foot{width:54px;height:112px;border-radius:54% 54% 42% 42%;background:linear-gradient(180deg,#ffe9da,#f1b5d0);border:2px solid #ea94ae;position:relative;cursor:pointer}.sl-foot:after{content:"";position:absolute;width:25px;height:32px;left:12px;top:39px;border-radius:50%;background:#c891d8;box-shadow:0 38px 0 #f7c77c}.sl-range{display:flex;gap:6px}.sl-range button,.sl-action{border:0;background:#f0efff;color:#263baf;border-radius:9px;padding:7px 10px;font:800 11px "Smiley Sans",sans-serif;cursor:pointer}.sl-range button.active,.sl-action{background:#2946c9;color:#fff}.sl-chart{width:100%;height:130px;margin:8px 0}.sl-chart path{fill:none;stroke-linecap:round}.sl-bars{display:grid;gap:9px}.sl-bar{display:grid;grid-template-columns:50px 1fr 38px;align-items:center;gap:7px;font-size:11px;color:#59609a}.sl-bar i{height:9px;border-radius:9px;background:#f0d8ec;overflow:hidden}.sl-bar i:after{content:"";display:block;height:100%;background:#f29ab3;border-radius:inherit;width:var(--v)}.sl-training{background:linear-gradient(145deg,#fff052,#ffced9);min-height:190px}.sl-training .sl-action{margin-top:12px}.sl-timer{font-size:40px;font-weight:900;color:#263baf;text-align:center;margin:14px 0}.sl-feedback button{border:0;background:#f0efff;color:#263baf;border-radius:9px;padding:7px;margin:4px;font:700 11px "Smiley Sans";cursor:pointer}.sl-bottom{position:absolute;bottom:0;height:62px;background:#fffdf4;border-top:1px solid #dce0f5;left:0;right:0;display:grid;grid-template-columns:repeat(5,1fr);z-index:4}.sl-nav-btn{border:0;background:transparent;color:#7780af;font:700 10px "Smiley Sans";cursor:pointer}.sl-nav-btn.active{color:#263baf;background:#fff052}.sl-modal{position:absolute;inset:0;background:rgba(38,59,175,.36);display:grid;place-items:center;z-index:9;padding:16px}.sl-modal-box{background:#fffdf4;border:2px solid #263baf;border-radius:18px;padding:19px;width:100%;box-shadow:7px 8px 0 #2946c9}.sl-modal-box h3{margin:0;color:#263baf}.sl-close{float:right;border:0;background:#f5a1b3;border-radius:8px;color:#263baf;font-weight:900;padding:5px 9px;cursor:pointer}.sl-report-ready{background:#edf7ed;color:#39735a;border-radius:11px;padding:11px;font-size:12px;font-weight:800;margin-top:10px}@media(max-width:900px){#insight{padding:80px 0}.sl-app-demo{grid-template-columns:1fr;gap:35px}.sl-app-copy{max-width:600px}.sl-phone{height:660px}}@media(max-width:460px){.sl-phone{height:630px;border-width:7px;border-radius:31px;box-shadow:8px 9px 0 #2946c9}.sl-app-screen{padding-left:11px;padding-right:11px}.sl-app-copy h2{font-size:38px}}
+    /* Keep scene copy legible over the darkened illustration fields. */
+    .scene h3{color:#fffdf4;text-shadow:0 2px 0 rgba(38,59,175,.22)}
+    .scene p{color:#fffdf4;text-shadow:0 1px 0 rgba(38,59,175,.2)}
+    /* Refined App visual system: compact, app-native and independent from the landing-page cards. */
+    #insight{background:#f5f2ff;padding:78px 0}.sl-app-demo{grid-template-columns:.8fr 1.2fr;gap:52px}.sl-app-copy{max-width:440px}.sl-app-copy h2{font-size:clamp(34px,3.7vw,52px);line-height:1.08}.sl-app-tabs{gap:5px}.sl-app-tab{padding:9px 12px;font-size:13px}.sl-phone{width:348px;height:574px;border:8px solid #1f2340;border-radius:38px;background:#f8f8fc;box-shadow:0 20px 45px rgba(31,35,64,.23),8px 8px 0 #b8b2e8}.sl-phone:before{width:94px;height:18px;left:calc(50% - 47px);background:#1f2340}.sl-app-top{height:74px;padding:26px 16px 7px;background:#fff;color:#242846;border-bottom:1px solid #e8e8f1}.sl-app-top small{color:#8a86a1;font-size:9px}.sl-app-top b{font-size:16px}.sl-app-screen{height:calc(100% - 130px);padding:10px 12px 66px}.sl-bottom{height:56px;background:#fff;border-color:#ebebf3}.sl-nav-btn{font-size:9px;color:#9592a9}.sl-nav-btn.active{background:transparent;color:#665ac5;box-shadow:inset 0 -3px #665ac5}.sl-sample{font-size:9px;color:#a19db3}.sl-status{background:#edf6f0;color:#3b7961;padding:6px 8px;border-radius:8px;font-size:10px;margin-bottom:8px}.sl-card{border:0;border-radius:13px;padding:11px;margin:8px 0;box-shadow:0 2px 9px rgba(47,42,85,.06);background:#fff}.sl-card h4{font-size:13px;color:#333650;margin-bottom:6px}.sl-card p{font-size:10px;color:#79758e}.sl-grid{gap:6px}.sl-metric{background:#f8f7fb;border-radius:9px;padding:8px;font-size:9px;color:#88839a}.sl-metric b{font-size:15px;color:#3d3c57}.sl-quality{background:linear-gradient(135deg,#f1edff,#fff3f6)}.sl-pressure{gap:21px}.sl-foot{width:42px;height:87px;border-color:#f3b7c8;background:linear-gradient(180deg,#feeae5,#f4c4db)}.sl-foot:after{width:19px;height:25px;left:9px;top:30px;box-shadow:0 29px 0 #f5d79c}.sl-range button,.sl-action{background:#f0eff6;color:#615d79;padding:6px 8px;border-radius:7px;font-size:10px}.sl-range button.active,.sl-action{background:#6b61c7;color:#fff}.sl-chart{height:100px}.sl-training{min-height:155px;background:linear-gradient(135deg,#f7f1ff,#fdf0f3)}.sl-timer{font-size:31px;margin:9px 0}.sl-bars{gap:7px}.sl-bar{grid-template-columns:47px 1fr 33px;font-size:10px}.sl-modal{background:rgba(28,27,54,.33)}.sl-modal-box{border:0;border-radius:15px;box-shadow:0 12px 35px rgba(31,35,64,.25);padding:16px}.sl-modal-box h3{font-size:15px}.sl-report-ready{font-size:10px}.sl-app-copy .sl-app-note{font-size:11px}@media(max-width:900px){#insight{padding:65px 0}.sl-app-demo{gap:27px}.sl-phone{height:550px}}@media(max-width:420px){.sl-phone{width:min(348px,100%);height:540px}}
+    /* Final mobile-first App art direction: soft blush surfaces, generous rounding and real-app hierarchy. */
+    #insight{background:radial-gradient(circle at 80% 30%,#ffe7eb,transparent 27%),linear-gradient(135deg,#fff2f3,#f8edff);padding:66px 0}#insight .eyebrow{color:#d96d8a}#insight .eyebrow:before{background:#df7592}.sl-app-demo{grid-template-columns:.82fr 1.18fr;gap:48px}.sl-app-copy h2{color:#423840;letter-spacing:-.07em}.sl-app-copy p{color:#84757d}.sl-app-tabs{margin-top:24px}.sl-app-tab{color:#6e5a64;border:1px solid transparent;border-radius:14px}.sl-app-tab.active,.sl-app-tab:hover{background:#fff;box-shadow:0 7px 18px rgba(200,112,139,.11);color:#dc6e8d}.sl-phone{width:306px;height:600px;border:9px solid #38323a;border-radius:39px;background:#fffafb;box-shadow:0 24px 50px rgba(134,79,98,.22),0 0 0 5px rgba(255,255,255,.55);font-family:"PingFang SC","Microsoft YaHei",sans-serif}.sl-phone:before{width:84px;height:20px;left:calc(50% - 42px);background:#38323a;border-radius:0 0 14px 14px}.sl-app-top{height:92px;padding:33px 16px 10px;background:linear-gradient(135deg,#fff9fb,#fff0f3);border-bottom:0;border-radius:29px 29px 0 0;position:relative}.sl-app-top:after{content:"小步";position:absolute;right:16px;top:34px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#f7b1c2,#d798d4);color:#fff;font-size:9px;font-weight:800;box-shadow:0 4px 9px rgba(200,112,139,.22)}.sl-app-top small{color:#bd9ea9;font-size:9px;letter-spacing:.06em}.sl-app-top b{color:#3f363c;font-size:17px}.sl-app-screen{height:calc(100% - 148px);padding:10px 11px 65px;background:linear-gradient(180deg,#fff7f8,#fffafb)}.sl-bottom{height:56px;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-top:1px solid #f2e3e7;border-radius:0 0 29px 29px}.sl-nav-btn{font-size:9px;color:#b6a6ac}.sl-nav-btn.active{color:#dc6e8d;box-shadow:inset 0 -3px #dc6e8d}.sl-sample{color:#d894a7;font-size:9px}.sl-status{background:#f4faf5;color:#609071;border-radius:12px;padding:7px 8px;font-size:9px;margin-bottom:8px}.sl-card{border:1px solid rgba(227,194,205,.58);border-radius:18px;padding:11px;margin:8px 0;background:rgba(255,255,255,.84);box-shadow:0 7px 18px rgba(183,111,133,.07)}.sl-card h4{color:#423840;font-size:13px;margin-bottom:7px}.sl-card p{color:#8a7880;font-size:10px}.sl-quality{background:linear-gradient(135deg,#fce2e9,#f8edf5);border:0}.sl-grid{gap:6px}.sl-metric{background:rgba(255,255,255,.72);border-radius:12px;padding:8px;color:#ac969e;font-size:8.5px}.sl-metric b{font-size:14px;color:#50424a}.sl-pressure{gap:24px;padding:2px 0}.sl-foot{width:41px;height:85px;border:0;background:linear-gradient(160deg,#ffd9e2,#e98fa9);box-shadow:inset -5px -7px 11px rgba(164,73,105,.16),0 4px 9px rgba(202,102,133,.12)}.sl-foot:after{background:#f8e1a1;box-shadow:0 29px 0 #d69ac1}.sl-range{background:#f9e9ee;padding:3px;border-radius:11px;justify-content:space-between}.sl-range button,.sl-action{background:transparent;color:#9a7b85;border-radius:8px;padding:6px 8px;font-size:9px}.sl-range button.active,.sl-action{background:#df7391;color:white;box-shadow:0 3px 8px rgba(210,102,133,.17)}.sl-chart{height:93px}.sl-bars{gap:7px}.sl-bar{font-size:9px;color:#967d87}.sl-bar i{background:#f8e4eb}.sl-bar i:after{background:#e995ae}.sl-training{background:linear-gradient(135deg,#ffe0e8,#fff1ef);border:0;min-height:145px}.sl-timer{font-size:29px;color:#df7391}.sl-feedback button{background:#fff1f4;color:#d67590;border:1px solid #f6d4dd;border-radius:10px;font-size:9px}.sl-modal{background:rgba(76,52,61,.28)}.sl-modal-box{border:0;border-radius:19px;background:#fffafa;box-shadow:0 18px 45px rgba(101,60,75,.26)}.sl-modal-box h3{color:#493c44}.sl-close{background:#f8d9e1;color:#a65570;border-radius:9px}.sl-report-ready{background:#f1f8f2;color:#5b8b69;border-radius:10px;font-size:9px}@media(max-width:900px){.sl-phone{width:300px;height:588px}}@media(max-width:420px){.sl-phone{width:294px;height:575px}}
+    /* App v3: editorial health-data interface — structure, charts and hierarchy. */
+    .sl-phone{width:312px;height:602px;border:5px solid #ddd5e2;border-radius:42px;box-shadow:0 24px 52px rgba(83,65,87,.16),0 0 0 1px #fff;background:#fffdfd}.sl-phone:before{width:62px;height:15px;left:calc(50% - 31px);background:#554c58;border-radius:12px;top:7px}.sl-app-top{height:78px;padding:29px 17px 8px;background:transparent}.sl-app-top:after{top:30px;right:16px;width:28px;height:28px;background:linear-gradient(145deg,#eab1bf,#c6b6e7)}.sl-app-screen{height:calc(100% - 134px);padding:5px 14px 62px;background:linear-gradient(180deg,#fffdfd,#fcf9fd)}.sl-bottom{height:51px;border:0;background:rgba(255,253,253,.86)}.sl-nav-btn{position:relative;font-size:9px}.sl-nav-btn.active{box-shadow:none}.sl-nav-btn.active:before{content:"";position:absolute;top:5px;left:calc(50% - 2px);width:4px;height:4px;border-radius:50%;background:#dd7995}.sl-card{border:0;box-shadow:none;background:transparent;border-radius:0;padding:0;margin:13px 0}.sl-card h4{font-size:13px;font-weight:600}.sl-v3-hero{border-radius:25px;padding:15px 16px;background:linear-gradient(135deg,#fff2f5,#f5f2ff);position:relative;min-height:168px;overflow:hidden}.sl-v3-hero:after{content:"";position:absolute;width:135px;height:135px;border-radius:50%;right:-28px;bottom:-42px;background:rgba(222,168,194,.17)}.sl-ring{width:111px;height:111px;border-radius:50%;background:conic-gradient(#d9829e 0 58%,#afa0da 58% 92%,#ead9e8 92% 100%);display:grid;place-items:center;margin:2px auto 0;position:relative;animation:sl-ring 1.1s ease-out}.sl-ring:before{content:"";position:absolute;inset:9px;border-radius:50%;background:#fffafb}.sl-ring b,.sl-ring span{z-index:1;text-align:center}.sl-ring b{font-size:28px;font-weight:600;color:#4b414a;line-height:1}.sl-ring span{font-size:10px;color:#927f89;margin-top:-42px}.sl-v3-meta{display:flex;justify-content:space-between;font-size:9px;color:#8b7a83;margin-top:6px}.sl-v3-meta b{display:block;color:#544852;font-size:11px;font-weight:600}.sl-observe{padding:12px 0;border-bottom:1px solid #f0eaf0;display:grid;grid-template-columns:27px 1fr 65px;gap:8px;align-items:center}.sl-observe:last-child{border:0}.sl-ob-icon{width:27px;height:27px;border-radius:9px;background:#f8edf4;color:#ce758f;display:grid;place-items:center;font-size:13px}.sl-observe b{font-size:11px;color:#514650;font-weight:600;display:block}.sl-observe small{font-size:9px;color:#94838c}.sl-mini{width:65px;height:25px}.sl-mirror{display:flex;align-items:center;gap:2px;height:8px}.sl-mirror i{height:7px;background:#e4a6ba;border-radius:8px 0 0 8px;width:48%}.sl-mirror i+ i{background:#bcb0df;border-radius:0 8px 8px 0;width:52%}.sl-v3-pressure{padding:13px 0 7px;display:grid;grid-template-columns:1fr 1fr;gap:8px}.sl-v3-foot{height:118px;position:relative}.sl-v3-foot svg{width:100%;height:100%}.sl-pressure-toggle{display:flex;gap:14px;font-size:10px;color:#a18996;border-bottom:1px solid #eee8ee;padding-bottom:8px}.sl-pressure-toggle button{border:0;background:transparent;padding:0;color:inherit;font:inherit;cursor:pointer}.sl-pressure-toggle button.active{color:#ca718e;font-weight:600}.sl-v3-chart{height:160px;width:100%;display:block}.sl-v3-chart .band{fill:#f3eaf7}.sl-v3-chart path{fill:none;stroke-linecap:round;stroke-linejoin:round}.sl-v3-insight{background:#faf3f5;border-radius:15px;padding:10px 12px;color:#7c6b75;font-size:10px;line-height:1.55}.sl-v3-sym{display:grid;gap:10px}.sl-v3-sym div{display:grid;grid-template-columns:62px 1fr 34px;gap:7px;align-items:center;font-size:10px;color:#80717a}.sl-v3-sym i{height:5px;background:linear-gradient(90deg,#edb3c2,#c8bbe7);border-radius:8px;position:relative}.sl-v3-sym i:after{content:"";position:absolute;width:6px;height:6px;border-radius:50%;right:var(--dot);top:-1px;background:#8a7596}.sl-report-cover{margin:2px -14px 15px;padding:19px 16px 16px;background:linear-gradient(135deg,#f8e9f0,#efebfa);border-radius:0 0 26px 26px;color:#554852}.sl-report-cover h4{font-size:18px;margin:4px 0 3px;font-weight:600}.sl-report-cover p{font-size:10px;color:#86737e;margin:0}.sl-report-cover strong{float:right;font-size:10px;background:#fffafd;padding:6px 8px;border-radius:12px;color:#bd718c}.sl-report-summary{font-size:12px;line-height:1.62;color:#5c4e58;padding:13px 0;border-bottom:1px solid #eee7ee}.sl-data-strip{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid #eee7ee}.sl-data-strip div{padding:0 7px;border-right:1px solid #eee7ee;font-size:8px;color:#9a8992;text-align:center}.sl-data-strip div:last-child{border:0}.sl-data-strip b{font-size:14px;color:#544650;display:block;font-weight:600}.sl-timeline{margin:13px 0 0;border-left:1px solid #eadce5;padding-left:15px}.sl-timeline div{position:relative;padding:0 0 12px;font-size:10px;color:#85747e}.sl-timeline div:before{content:"";position:absolute;width:7px;height:7px;border-radius:50%;background:#d9829e;left:-19px;top:4px}.sl-timeline b{color:#594c55;display:block;font-size:11px}.sl-tags{display:flex;gap:6px;flex-wrap:wrap}.sl-tags span{font-size:9px;padding:6px 8px;border-radius:20px;background:#f8edf2;color:#a2647a}@keyframes sl-ring{from{background:conic-gradient(#ead9e8 0 100%)}to{background:conic-gradient(#d9829e 0 58%,#afa0da 58% 92%,#ead9e8 92% 100%)}}@media(max-width:900px){.sl-phone{width:306px;height:592px}}@media(max-width:420px){.sl-phone{width:300px;height:580px}}
+  </style>
 </head>
 <body>
-  <header class="site-header" data-header>
-    <a class="brand" href="#hero" aria-label="StepLAB 首页">
-      <img src="assets/steplab-logo-transparent.png" alt="StepLAB logo">
-      <span>StepLAB</span>
-    </a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">菜单</button>
-    <nav class="site-nav" id="site-nav" aria-label="主导航">
-      <a href="#product">产品</a>
-      <a href="#features">功能</a>
-      <a href="#workflow">工作原理</a>
-      <a href="#app">App</a>
-      <a href="#faq">常见问题</a>
-    </nav>
-    <a class="header-cta" href="#download">下载 App</a>
-  </header>
-
+  <header class="nav" id="top"><div class="wrap nav-in"><a class="brand" href="#home" aria-label="StepLAB 首页"><img src="assets/md-source/steplab-logo-pink.png" alt="StepLAB"></a><nav class="links" aria-label="主导航"><a href="#product">产品</a><a href="#capability">核心能力</a><a href="#how">工作原理</a><a href="#insight">成长洞察</a><a href="#scene">使用场景</a><a href="#faq">常见问题</a></nav><a class="btn btn-primary header-cta" href="#product">了解产品 <span class="arrow">→</span></a><button class="menu" aria-label="打开菜单" aria-expanded="false">☰</button></div></header>
   <main>
-    <section class="hero section-anchor" id="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">儿童步态健康管理智能硬件品牌</p>
-          <h1><span>步步有迹，</span><span>矫护有据。</span></h1>
-          <h2>儿童智能步态监测与辅助支撑系统</h2>
-          <p class="hero-text">StepLAB 通过足底压力传感、IMU 步态识别与 App 趋势反馈，帮助家长持续看见孩子的足底受力和步态变化，并通过训练任务、支撑垫建议与复测报告，建立儿童步态健康管理闭环。</p>
-          <div class="hero-actions">
-            <a class="btn primary" href="#product">了解产品</a>
-            <a class="btn secondary" href="#app">查看 App 功能</a>
-          </div>
-          <div class="hero-tags" aria-label="产品关键词">
-            <span>6—12 岁儿童</span>
-            <span>足底压力监测</span>
-            <span>步态趋势分析</span>
-            <span>支撑垫反馈</span>
-          </div>
-        </div>
-
-        <div class="hero-visual reveal" aria-label="StepLAB 产品主视觉">
-          <div class="hero-card product-stage" data-tilt-card>
-            <div class="product-panel">
-              <img class="product-img" src="assets/product-insole-system.png" alt="StepLAB 儿童智能步态监测鞋垫、支撑垫和充电盒">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="problem section-pad section-anchor" id="problem">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Problem Insight</p>
-          <h2>孩子的步态变化，往往比我们发现得更早</h2>
-          <p>儿童足部仍在发育，足弓、受力习惯和行走姿态都可能在日常运动中逐渐变化。但这些变化通常难以被家长及时、准确地看见。</p>
-        </div>
-        <div class="problem-grid">
-          <article class="info-card reveal">
-            <span class="card-index">01</span>
-            <h3>看不出来</h3>
-            <p>孩子走路有点怪、鞋底磨损不均、跑跳不稳，家长往往只能凭经验判断，很难知道是否需要进一步关注。</p>
-          </article>
-          <article class="info-card reveal">
-            <span class="card-index">02</span>
-            <h3>测得太少</h3>
-            <p>机构或体态检测通常是阶段性检查，无法持续记录孩子日常行走和运动中的步态变化。</p>
-          </article>
-          <article class="info-card reveal">
-            <span class="card-index">03</span>
-            <h3>调了不知道有没有用</h3>
-            <p>传统矫正鞋垫或机能鞋更多提供静态支撑，缺少训练反馈、复测对比和长期趋势记录。</p>
-          </article>
-        </div>
-        <p class="closing-line reveal">StepLAB 关注的不是一次性判断，而是让儿童步态变化可以被持续看见、理解和反馈。</p>
-      </div>
-    </section>
-
-    <section class="product section-pad section-anchor" id="product">
-      <div class="container product-grid">
-        <div class="product-copy reveal">
-          <p class="eyebrow">Product</p>
-          <h2>一片鞋垫，连接监测、反馈与支撑调整</h2>
-          <p>StepLAB 儿童智能步态监测鞋垫内置足底压力传感器与运动传感器，可记录儿童日常行走、跑跳中的足底受力和步态状态。配套 App 将数据转化为家长可理解的趋势提醒、训练任务、支撑垫建议和复测报告。</p>
-          <div class="keyword-row">
-            <span>趋势监测</span>
-            <span>辅助支撑</span>
-            <span>训练反馈</span>
-            <span>复测参考</span>
-          </div>
-        </div>
-        <div class="position-card reveal">
-          <h3>StepLAB 儿童智能步态监测鞋垫</h3>
-          <dl>
-            <div>
-              <dt>适用年龄</dt>
-              <dd>6—12 岁儿童</dd>
-            </div>
-            <div>
-              <dt>核心场景</dt>
-              <dd>日常行走、运动训练、足弓发育观察、步态趋势管理</dd>
-            </div>
-            <div>
-              <dt>产品形态</dt>
-              <dd>智能鞋垫 + 可替换支撑垫 + App</dd>
-            </div>
-          </dl>
-        </div>
-      </div>
-    </section>
-
-    <section class="features section-pad section-anchor" id="features">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Core Features</p>
-          <h2>从每一步中提取可理解的健康线索</h2>
-          <p>把压力、运动和复测数据转化为清楚、温和、可执行的家庭步态健康管理建议。</p>
-        </div>
-        <div class="feature-grid">
-          <article class="feature-card reveal">
-            <span class="feature-mark">压力</span>
-            <h3>足底压力监测</h3>
-            <p>通过关键压力点采集后跟、足弓、前掌和趾区的受力变化，帮助家长观察孩子日常足底压力分布趋势。</p>
-            <div class="mini-tags"><span>压力传感</span><span>左右受力</span><span>足弓趋势</span></div>
-          </article>
-          <article class="feature-card reveal">
-            <span class="feature-mark">IMU</span>
-            <h3>IMU 步态识别</h3>
-            <p>结合加速度计与陀螺仪识别站立、行走、跑步等状态，分析步态周期、支撑时间和足部姿态变化。</p>
-            <div class="mini-tags"><span>步态周期</span><span>运动状态</span><span>姿态趋势</span></div>
-          </article>
-          <article class="feature-card reveal">
-            <span class="feature-mark">提醒</span>
-            <h3>趋势提醒</h3>
-            <p>当左右受力差异、足弓压力或足部前进角出现持续变化时，App 会给出温和提醒，帮助家长及时关注。</p>
-            <div class="mini-tags"><span>趋势分析</span><span>建议关注</span><span>非医疗诊断</span></div>
-          </article>
-          <article class="feature-card reveal">
-            <span class="feature-mark">训练</span>
-            <h3>训练反馈</h3>
-            <p>根据近期步态趋势生成足弓激活、脚趾抓地、直线步行等训练任务，并记录完成情况。</p>
-            <div class="mini-tags"><span>训练计划</span><span>完成记录</span><span>习惯养成</span></div>
-          </article>
-          <article class="feature-card reveal">
-            <span class="feature-mark">支撑</span>
-            <h3>支撑垫建议</h3>
-            <p>基于足底压力趋势与复测结果，推荐低、中、高不同支撑强度的可替换支撑垫，形成可执行的辅助支撑路径。</p>
-            <div class="mini-tags"><span>低支撑</span><span>中支撑</span><span>高支撑</span></div>
-          </article>
-          <article class="feature-card reveal">
-            <span class="feature-mark">报告</span>
-            <h3>复测报告</h3>
-            <p>通过周期性对比展示步态稳定性、左右受力差异、足弓压力趋势和训练完成率，让调整效果有迹可循。</p>
-            <div class="mini-tags"><span>复测对比</span><span>成长档案</span><span>家庭报告</span></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="workflow section-pad section-anchor" id="workflow">
-      <div class="container">
-        <div class="section-heading light reveal">
-          <p class="eyebrow">How It Works</p>
-          <h2>从监测到调整，形成完整闭环</h2>
-          <p>StepLAB 不追求一次性判断，而是通过持续记录和阶段反馈，让每一次调整都有依据。</p>
-        </div>
-        <div class="workflow-track">
-          <article class="step-card reveal"><span>01</span><h3>采集数据</h3><p>鞋垫记录足底压力和运动状态。</p></article>
-          <article class="step-card reveal"><span>02</span><h3>识别趋势</h3><p>系统分析左右受力、足弓压力和步态稳定性变化。</p></article>
-          <article class="step-card reveal"><span>03</span><h3>给出提醒</h3><p>App 将复杂数据转化为家长可理解的趋势提醒。</p></article>
-          <article class="step-card reveal"><span>04</span><h3>推荐训练</h3><p>根据近期状态生成轻量训练任务。</p></article>
-          <article class="step-card reveal"><span>05</span><h3>调整支撑</h3><p>结合趋势建议选择合适支撑垫。</p></article>
-          <article class="step-card reveal"><span>06</span><h3>复测对比</h3><p>周期性比较调整前后的变化。</p></article>
-          <article class="step-card reveal"><span>07</span><h3>更新建议</h3><p>根据新数据继续优化训练与支撑方案。</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="support section-pad section-anchor" id="support">
-      <div class="container support-grid">
-        <div class="support-copy reveal">
-          <p class="eyebrow">Support System</p>
-          <h2>可替换支撑垫，让调整更轻量</h2>
-          <p>相比复杂的主动机械结构，StepLAB 当前采用更稳妥的可替换支撑垫方案。用户可以根据 App 建议与复测结果，选择不同支撑强度的足弓支撑垫，在保证舒适性的基础上进行辅助支撑调整。</p>
-          <p class="notice">支撑垫建议仅用于日常辅助观察和支撑调整，不构成医疗处方。</p>
-        </div>
-        <div class="support-levels reveal">
-          <article><span>低支撑</span><p>适合初次使用或轻度支撑需求，帮助孩子逐步适应足底支撑。</p></article>
-          <article class="active"><span>中支撑</span><p>适合日常辅助支撑，在舒适性和支撑感之间保持平衡。</p></article>
-          <article><span>高支撑</span><p>适合更明显的支撑需求，建议结合复测结果或专业建议后使用。</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="scenarios section-pad">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Use Scenarios</p>
-          <h2>适合儿童日常成长中的多个场景</h2>
-        </div>
-        <div class="scenario-grid">
-          <article class="info-card reveal"><h3>日常走路观察</h3><p>在日常穿鞋过程中持续记录步态趋势，帮助家长更早发现值得关注的变化。</p></article>
-          <article class="info-card reveal"><h3>运动表现提升</h3><p>观察跑跳、步频和支撑稳定性，为儿童运动训练提供辅助反馈。</p></article>
-          <article class="info-card reveal"><h3>足弓发育关注</h3><p>记录足弓区域压力趋势，辅助家长进行长期观察和复测。</p></article>
-          <article class="info-card reveal"><h3>训练与复测</h3><p>配合训练任务和支撑垫建议，形成阶段性复测与调整记录。</p></article>
-          <article class="info-card reveal"><h3>近距离安全提醒</h3><p>通过 BLE 断连提醒和手机协同定位，提供基础的近距离防丢辅助。</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="technology section-pad">
-      <div class="container tech-grid">
-        <div class="section-heading align-left reveal">
-          <p class="eyebrow">Technology</p>
-          <h2>轻量技术组合，优先保证可落地</h2>
-          <p>StepLAB 采用成熟轻量的技术组合，将核心能力集中在足底压力监测、IMU 步态识别、BLE 数据同步和 App 端分析上。这样既能控制鞋垫厚度、功耗和成本，也能优先验证儿童步态健康管理的核心价值。</p>
-          <p class="notice">当前产品不采用复杂主动气动结构，不依赖独立蜂窝联网，也不承诺自动治疗。</p>
-        </div>
-        <div class="tech-list reveal">
-          <div><strong>足底压力传感</strong><span>采集后跟、足弓、前掌和趾区的关键压力变化。</span></div>
-          <div><strong>IMU 运动识别</strong><span>识别行走、跑步、站立等状态，并辅助分析步态周期。</span></div>
-          <div><strong>BLE 数据同步</strong><span>通过低功耗蓝牙将鞋垫数据同步至手机 App。</span></div>
-          <div><strong>App 端分析</strong><span>将压力和运动数据转化为趋势提醒、训练建议和复测报告。</span></div>
-          <div><strong>可替换支撑结构</strong><span>通过低、中、高不同支撑垫实现轻量支撑调整。</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="app-preview section-pad section-anchor" id="app">
-      <div class="container app-grid">
-        <div class="app-copy reveal">
-          <p class="eyebrow">App Preview</p>
-          <h2>配套 App，让步态变化更容易理解</h2>
-          <p>StepLAB App 将足底压力和步态数据转化为趋势图、训练任务、支撑建议和复测报告，帮助家长完成从观察到调整的全过程。</p>
-          <div class="app-tabs" role="tablist" aria-label="App 页面切换">
-            <button class="active" type="button" data-app-tab="overview">今日概览</button>
-            <button type="button" data-app-tab="trend">趋势分析</button>
-            <button type="button" data-app-tab="plan">训练计划</button>
-            <button type="button" data-app-tab="report">复测报告</button>
-          </div>
-        </div>
-        <div class="phone-stage reveal">
-          <div class="phone-frame" aria-label="StepLAB App 预览">
-            <div class="phone-status"><span>9:41</span><span>StepLAB</span></div>
-            <div class="phone-screen" data-app-screen></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="faq section-pad section-anchor" id="faq">
-      <div class="container faq-grid">
-        <div class="section-heading align-left reveal">
-          <p class="eyebrow">FAQ</p>
-          <h2>常见问题</h2>
-          <p>我们把产品边界讲清楚，让家长更安心地理解 StepLAB 的作用。</p>
-        </div>
-        <div class="faq-list reveal">
-          <details open>
-            <summary>StepLAB 是医疗器械吗？</summary>
-            <p>当前产品定位为儿童足部发育与步态健康的日常监测和反馈工具，不用于疾病诊断、治疗或替代专业医疗判断。如孩子出现持续疼痛、明显异常或运动受限，建议咨询医生、康复治疗师或专业机构。</p>
-          </details>
-          <details>
-            <summary>它适合关注扁平足或内八外八趋势吗？</summary>
-            <p>StepLAB 不承诺改变足部形态或替代专业判断。它的作用是持续记录足底压力和步态趋势，提供训练反馈、支撑垫建议和复测参考，帮助家长更早关注孩子的步态变化。</p>
-          </details>
-          <details>
-            <summary>为什么选择鞋垫而不是直接做鞋？</summary>
-            <p>鞋垫更适合作为第一阶段的低干扰载体，可以放入多种儿童鞋中使用，也更容易验证足底压力监测、步态分析和支撑反馈等核心能力。整鞋一体化可以作为后续升级方向。</p>
-          </details>
-          <details>
-            <summary>孩子需要每天穿吗？</summary>
-            <p>建议在日常行走或训练场景中规律使用，以便形成连续趋势记录。具体使用时长可以根据孩子舒适度和家庭习惯调整。</p>
-          </details>
-          <details>
-            <summary>数据会不会很难看懂？</summary>
-            <p>App 会将足底压力和步态数据转化为趋势提醒、训练任务和复测报告，尽量避免复杂术语，让家长能够快速理解当前状态。</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="download section-pad section-anchor" id="download">
-      <div class="container download-card reveal">
-        <div>
-          <p class="eyebrow">Download</p>
-          <h2>开始记录孩子的每一步变化</h2>
-          <p>下载 StepLAB App，连接智能鞋垫，查看步态趋势、训练任务、支撑建议和复测报告。</p>
-          <div class="download-actions">
-            <button class="store-btn" type="button" data-toast="StepLAB App 即将上线">App Store 下载</button>
-            <button class="store-btn dark" type="button" data-toast="StepLAB App 即将上线">Android 下载</button>
-          </div>
-        </div>
-        <div class="qr-card" aria-label="扫码下载 App 即将开放">
-          <span>扫码下载 App</span>
-          <strong>即将开放</strong>
-        </div>
-      </div>
-    </section>
+    <section class="hero" id="home"><div class="wrap hero-grid"><div class="hero-copy reveal"><p class="eyebrow">儿童足部成长智能监测</p><h1>步步有迹，<br><em>成长有据</em></h1><p class="lead">StepLAB 通过智能鞋垫，持续记录儿童真实行走中的足底压力与步态变化，让每一步都成为可追踪的成长数据。</p><p class="sublead">从左右受力、步态节律到长期变化趋势，帮助家长更清晰地了解孩子的足部成长状态。</p><div class="actions"><a class="btn btn-primary" href="#product">了解 StepLAB <span class="arrow">→</span></a><a class="btn btn-secondary" href="#how">查看工作原理</a></div><div class="tags"><span>足底压力监测</span><span>步态趋势记录</span><span>左右受力对比</span><span>成长档案管理</span></div></div><div class="product-stage reveal"><img src="assets/md-source/steplab-product-pink.png" alt="StepLAB 智能监测鞋垫产品图"></div></div></section>
+    <section class="section why" id="product"><div class="wrap split"><div class="reveal"><p class="eyebrow">长期记录的意义</p><h2 class="title">孩子的足部成长，不只发生在一次观察中</h2><p class="lead">真实的步态与足底受力，会随着成长、鞋型、活动量和生活习惯持续变化。一次观察，只是一个瞬间。</p></div><div class="timeline reveal"><div class="time"><strong>01 / 单次静态观察</strong><b>只看到某个时刻的状态</b><p>短暂、局部的信息难以呈现孩子在日常生活中的真实变化。</p></div><div class="time"><strong>02 / 日常动态记录</strong><b>记录真实走路与活动中的变化</b><p>把日常行走、上学与活动时的受力、节律留在连续数据里。</p></div><div class="time"><strong>03 / 长期趋势对比</strong><b>看见微小而持续的差异</b><p>让家长看到的不再只是某一刻数据，而是一段时间内的成长轨迹。</p></div></div></div></section>
+    <section class="section capability" id="capability"><div class="wrap"><p class="eyebrow reveal">Core capabilities</p><h2 class="title reveal">从脚下数据，看见成长趋势</h2><div class="feature-grid"><article class="feature reveal"><div class="visual">◌</div><h3>足底压力分布</h3><p>记录后跟、前掌、足弓及主要受力区域的压力变化，呈现真实行走中的足底负荷特征。</p><div class="data-line"><i></i><i></i><i></i><i></i><i></i></div></article><article class="feature reveal"><div class="visual">↔</div><h3>左右受力对比</h3><p>持续观察左右脚在负荷、步态节律和受力分布上的差异，理解长期变化。</p><div class="data-line"><i></i><i></i><i></i><i></i><i></i></div></article><article class="feature reveal"><div class="visual">⌁</div><h3>步态周期识别</h3><p>结合压力感应与 IMU，识别着地、支撑、蹬离和摆动等主要步态阶段。</p><div class="data-line"><i></i><i></i><i></i><i></i><i></i></div></article><article class="feature reveal"><div class="visual">⌇</div><h3>成长趋势记录</h3><p>将不同时间段的数据形成可比较的成长档案，呈现足部与步态变化轨迹。</p><div class="data-line"><i></i><i></i><i></i><i></i><i></i></div></article></div></div></section>
+    <section class="section workflow" id="how"><div class="wrap"><p class="eyebrow reveal" style="color:#f5aec8">How it works</p><h2 class="title reveal">一双鞋垫，如何记录每一步</h2><p class="lead reveal">从感知、同步到整理，StepLAB 让数据以更容易理解的方式陪伴日常成长。</p><div class="process"><article class="step reveal"><div class="step-num">01</div><h3>多点压力采集</h3><p>薄膜压力传感器分布于主要受力区域，记录不同位置的压力变化。</p></article><article class="step reveal"><div class="step-num">02</div><h3>IMU 步态感知</h3><p>采集足部运动状态，识别步态节律与活动变化。</p></article><article class="step reveal"><div class="step-num">03</div><h3>BLE 数据同步</h3><p>通过低功耗蓝牙，将数据同步至家长端 App。</p></article><article class="step reveal"><div class="step-num">04</div><h3>算法分析</h3><p>完成数据校准、步态识别、左右对比与趋势分析。</p></article><article class="step reveal"><div class="step-num">05</div><h3>成长报告</h3><p>将复杂数据转化为家长可理解的图表、趋势与变化提示。</p></article></div></div></section>
+    <section class="section insight" id="insight"><div class="wrap insight-grid"><div class="phone reveal"><div class="phone-head"><span>9:41</span><span>●●●</span></div><h4>本周成长记录</h4><div class="chart"><svg viewBox="0 0 260 110" role="img" aria-label="步态趋势示意图"><path d="M0,83 C25,64 38,91 61,66 S102,26 127,54 S155,88 176,58 S213,27 260,42" fill="none" stroke="#e984ab" stroke-width="4" stroke-linecap="round"/><path d="M0,89 C26,78 45,90 67,81 S110,44 132,68 S164,89 190,71 S224,61 260,64" fill="none" stroke="#9d8bdf" stroke-width="3" stroke-linecap="round"/></svg></div><div class="stat-row"><div class="stat"><b>7 天</b>记录周期</div><div class="stat"><b>平稳</b>步态节律</div></div></div><div class="reveal"><p class="eyebrow">Parent insight</p><h2 class="title">复杂数据，转化为家长看得懂的成长记录</h2><p class="lead">数据不该成为理解的门槛。StepLAB 将日常信息整理成清晰、克制的趋势表达，让关注更有依据。</p><ul class="insight-list"><li><span>01</span><div><b>趋势而非单一数字</b><small>用连续记录呈现一段时间内的变化。</small></div></li><li><span>02</span><div><b>对比而非复杂术语</b><small>以左右受力、步态节律等直观方式呈现。</small></div></li><li><span>03</span><div><b>提醒而非制造焦虑</b><small>仅在观察到需要关注的持续变化时提示家长。</small></div></li></ul></div></div></section>
+    <section class="section scenes" id="scene"><div class="wrap"><p class="eyebrow reveal">Everyday moments</p><h2 class="title reveal">陪伴孩子每一个真实成长场景</h2><div class="scene-grid"><article class="scene reveal"><i class="orb"></i><i class="mini-insole"></i><h3>日常成长记录</h3><p>在上学、步行和日常活动中，持续积累真实数据。</p></article><article class="scene reveal"><i class="orb"></i><i class="mini-insole"></i><h3>运动与活动观察</h3><p>在跑跳和运动过程中，观察不同活动状态下的步态与受力变化。</p></article><article class="scene reveal"><i class="orb"></i><i class="mini-insole"></i><h3>阶段性成长复盘</h3><p>通过周报和月报，对比不同阶段的变化，让成长更清晰。</p></article></div></div></section>
+    <section class="section privacy"><div class="wrap"><p class="eyebrow reveal">Privacy matters</p><h2 class="title reveal">每一份成长数据，都值得被认真保护</h2><div class="privacy-card reveal"><div class="privacy-lock"><div class="lock" aria-hidden="true"></div></div><div class="privacy-copy"><h3>为孩子而设计的数据边界</h3><p class="lead">StepLAB 重视监护人的知情与管理权，以必要、克制的方式处理儿童相关数据。</p><div class="checks"><div><i>✓</i>儿童数据最小化采集</div><div><i>✓</i>监护人授权与管理</div><div><i>✓</i>设备与账户绑定</div><div><i>✓</i>数据加密与敏感信息保护</div><div><i>✓</i>支持管理与删除数据</div><div><i>✓</i>不向无关第三方出售儿童数据</div></div></div></div></div></section>
+    <section class="section faq" id="faq"><div class="wrap faq-layout"><div class="reveal"><p class="eyebrow">FAQ</p><h2 class="title">常见问题</h2><p class="lead">关于 StepLAB 的使用范围与日常体验。</p></div><div class="faq-list reveal"><details><summary>StepLAB 适合什么年龄段的儿童？</summary><p>当前产品面向处于成长阶段、需要长期观察足部和步态变化的儿童。具体适用年龄将依据产品测试和最终版本说明确定。</p></details><details><summary>StepLAB 可以诊断扁平足吗？</summary><p>StepLAB 用于记录足底压力与步态趋势，不直接替代医生或专业机构的诊断。</p></details><details><summary>孩子需要每天穿吗？</summary><p>系统以日常穿戴数据形成趋势记录，具体佩戴时间应依据产品说明和使用场景合理安排。</p></details><details><summary>是否需要充电？</summary><p>智能鞋垫采用低功耗设计，具体续航时间以后续量产版本为准。</p></details><details><summary>可以用于定位吗？</summary><p>产品可支持基于 BLE 的近距离设备提醒与手机协同功能，但不应宣传为高精度实时定位设备。</p></details></div></div></section>
+    <section class="cta"><div class="wrap"><div class="cta-box reveal"><h2>让成长的每一步，<br>都留下依据</h2><p>StepLAB 正在让儿童足部成长从模糊感受，转化为连续、清晰、可理解的数据记录。</p><a class="btn btn-primary" href="#home">了解 StepLAB <span class="arrow">→</span></a><img src="assets/md-source/steplab-product-pink.png" alt="StepLAB 智能鞋垫"></div></div></section>
   </main>
+  <footer class="footer"><div class="wrap"><div class="footer-top"><a href="#home"><img src="assets/md-source/steplab-logo-pink.png" alt="StepLAB"></a><div class="footer-links"><a href="#product">产品</a><a href="#capability">核心能力</a><a href="#how">工作原理</a><a href="#faq">隐私说明</a><a href="#faq">联系我们</a></div></div><div class="fine"><span>© 2026 StepLAB. All rights reserved.</span><span>StepLAB 提供儿童足底压力与步态趋势记录，不替代医疗机构或专业人员的诊断与治疗建议。</span></div></div></footer>
+  <script>
+    const nav=document.querySelector('.nav'),menu=document.querySelector('.menu'),links=document.querySelector('.links');
+    addEventListener('scroll',()=>nav.classList.toggle('is-scrolled',scrollY>20),{passive:true});
+    menu.addEventListener('click',()=>{const on=menu.getAttribute('aria-expanded')==='true';menu.setAttribute('aria-expanded',!on);links.style.cssText=on?'':'display:flex;position:absolute;top:72px;left:16px;right:16px;flex-direction:column;padding:18px;background:#fffafc;border:1px solid rgba(67,46,61,.12);border-radius:16px;box-shadow:0 18px 40px rgba(90,50,70,.12)'});
+    const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <img src="assets/steplab-logo-transparent.png" alt="StepLAB logo">
-        <p>儿童智能步态健康管理品牌</p>
-      </div>
-      <nav aria-label="页脚导航">
-        <a href="#product">产品</a>
-        <a href="#features">功能</a>
-        <a href="#app">App</a>
-        <a href="#faq">FAQ</a>
-        <a href="#download">隐私</a>
-      </nav>
-      <div>
-        <strong>Contact</strong>
-        <a href="mailto:hello@steplab.example">hello@steplab.example</a>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <span>© 2026 StepLAB. All rights reserved.</span>
-      <span>StepLAB 当前定位为儿童足部发育与步态健康的日常监测和反馈工具，不用于疾病诊断、治疗或替代专业医疗判断。</span>
-    </div>
-  </footer>
+    // Embedded interactive parent-app demo — every number is deliberately marked as sample data.
+    const appHost=document.querySelector('#insight');
+    appHost.insertAdjacentHTML('afterbegin',`<div class="wrap sl-app-demo reveal"><div class="sl-app-copy"><p class="eyebrow">Parent App demo</p><h2>每一步数据，<br>都能被理解</h2><p>StepLAB 将足底压力、步态变化与日常活动记录，转化为清晰、连续的成长观察。点击右侧原型，切换不同页面。</p><div class="sl-app-tabs"><button class="sl-app-tab active" data-jump="home">今日记录</button><button class="sl-app-tab" data-jump="trend">趋势观察</button><button class="sl-app-tab" data-jump="training">辅助训练</button><button class="sl-app-tab" data-jump="report">成长报告</button><button class="sl-app-tab" data-jump="profile">儿童档案</button></div><p class="sl-app-note">所有界面内容均为示例数据，用于展示产品体验。</p></div><div class="sl-phone" aria-label="StepLAB 家长端 App 交互演示"><div class="sl-app-top"><small>STEP LAB · 示例数据</small><b id="sl-top-title">早上好，家长</b></div><div class="sl-app-screen" id="sl-screen"></div><nav class="sl-bottom" aria-label="App 导航"><button class="sl-nav-btn active" data-page="home">首页</button><button class="sl-nav-btn" data-page="trend">趋势</button><button class="sl-nav-btn" data-page="training">训练</button><button class="sl-nav-btn" data-page="report">报告</button><button class="sl-nav-btn" data-page="profile">我的</button></nav></div></div>`);
+    appHost.querySelector('.sl-app-demo').classList.add('in');
+    const screen=document.querySelector('#sl-screen'),topTitle=document.querySelector('#sl-top-title');let currentPage='home',timer;
+    const titles={home:'早上好，家长',trend:'成长趋势观察',training:'今天，陪孩子动一动',report:'第 28 周成长观察报告',profile:'小步的成长档案'};
+    const home=()=>`<span class="sl-sample">示例数据</span><div class="sl-status">● 已连接 · 鞋垫电量 82% <span>18:42 同步</span></div><section class="sl-card sl-quality"><h4>今日数据概览</h4><div class="sl-grid"><div class="sl-metric"><b>2小时18分</b>有效佩戴</div><div class="sl-metric"><b>7,842 步</b>有效步态周期</div><div class="sl-metric"><b>92%</b>数据完整度</div><div class="sl-metric"><b>记录充分</b>当前质量</div></div></section><section class="sl-card"><h4>今日核心观察</h4><div class="sl-grid"><div class="sl-metric"><b>2.6%</b>左右负荷差异</div><div class="sl-metric"><b>+2.1%</b>中足接触趋势</div><div class="sl-metric"><b>整体平稳</b>步态节律</div><div class="sl-metric"><b>轻微波动</b>前足推进</div></div></section><section class="sl-card"><h4>今日足底压力 <button class="sl-action" id="sl-pressure-open">查看详情</button></h4><div class="sl-pressure"><div class="sl-foot" title="左脚压力分区"></div><div class="sl-foot" title="右脚压力分区"></div></div><p>以柔和色彩呈现左右足底分区负荷。</p></section><section class="sl-card"><h4>今日系统解读</h4><p>今日整体记录稳定。右侧前足负荷较个人近期水平略高，但当前变化尚未形成持续趋势，建议结合未来 2–3 次有效记录继续观察。</p></section>`;
+    const trend=(range='7天')=>`<span class="sl-sample">示例数据</span><div class="sl-range"><button class="${range==='7天'?'active':''}" data-range="7天">7天</button><button class="${range==='30天'?'active':''}" data-range="30天">30天</button><button class="${range==='90天'?'active':''}" data-range="90天">90天</button></div><section class="sl-card"><h4>左右负荷趋势 · ${range}</h4><svg class="sl-chart" viewBox="0 0 300 130" aria-label="左右负荷趋势图"><path d="M8 84 C40 66,65 95,92 72 S143 48,165 66 S218 88,292 48" stroke="#ef91ad" stroke-width="5"/><path d="M8 51 C45 67,65 39,94 61 S145 85,166 52 S214 35,292 70" stroke="#9a90df" stroke-width="5"/></svg><p>粉色：左脚　紫色：右脚。当前差异处于个人近期波动范围内。</p></section><section class="sl-card"><h4>中足接触趋势</h4><div class="sl-grid"><div class="sl-metric"><b>+2.1%</b>较30日基线</div><div class="sl-metric"><b>平稳</b>当前状态</div></div><p>用于观察足弓区域参与承重的长期变化，不单独构成足部判断。</p></section><section class="sl-card"><h4>左右对称性</h4><div class="sl-bars"><div class="sl-bar"><span>总体负荷</span><i style="--v:52%"></i><b>2.6%</b></div><div class="sl-bar"><span>支撑时间</span><i style="--v:44%"></i><b>3.2%</b></div><div class="sl-bar"><span>前足推进</span><i style="--v:58%"></i><b>4.8%</b></div></div></section><section class="sl-card"><h4>趋势解读</h4><p>最近 ${range} 左右负荷差异整体较小，目前尚未形成持续变化趋势，建议保持记录。</p></section>`;
+    const training=()=>`<span class="sl-sample">示例数据</span><section class="sl-card sl-training"><h4>今日推荐：单脚平衡</h4><p>30 秒 × 2 组。站在平整、防滑地面，家长在旁保护；以舒适和稳定为主。</p><button class="sl-action" id="sl-training-start">开始 10 秒演示</button><div class="sl-timer" id="sl-timer">00:10</div></section><section class="sl-card"><h4>本周训练记录</h4><div class="sl-grid"><div class="sl-metric"><b>3 次</b>本周完成</div><div class="sl-metric"><b>18 分钟</b>累计时长</div></div></section><section class="sl-card sl-feedback"><h4>今天的活动感受</h4><p>完成后，由家长记录孩子的主观感受。</p><button>轻松</button><button>适中</button><button>有些吃力</button><button>出现不适</button></section>`;
+    const report=()=>`<span class="sl-sample">示例数据</span><section class="sl-card"><h4>第 28 周成长观察报告</h4><div class="sl-grid"><div class="sl-metric"><b>6 天</b>有效佩戴</div><div class="sl-metric"><b>89%</b>完整度</div><div class="sl-metric"><b>2.2%</b>负荷差异</div><div class="sl-metric"><b>3 次</b>训练完成</div></div></section><section class="sl-card"><h4>本周总结</h4><p>本周记录较完整，左右总体负荷差异保持在个人近期范围内。周末活动量增加后，右侧前足负荷短时上升，次日已回落。</p></section><button class="sl-action" id="sl-report-generate">生成成长报告</button><div id="sl-report-result"></div><p style="font-size:10px;color:#6873a3">报告用于家庭记录或专业咨询参考，不构成医学诊断。</p>`;
+    const profile=()=>`<span class="sl-sample">示例数据</span><section class="sl-card"><h4>儿童档案</h4><div class="sl-grid"><div class="sl-metric"><b>小步</b>姓名</div><div class="sl-metric"><b>7 岁</b>年龄</div><div class="sl-metric"><b>132 cm</b>身高</div><div class="sl-metric"><b>29 kg</b>体重</div></div></section><section class="sl-card"><h4>设备信息</h4><p>StepLAB 智能鞋垫　·　已连接<br>电量 82%　·　今天 18:42 最近同步</p></section><section class="sl-card"><h4>数据与隐私</h4><p>监护人授权　·　数据授权管理　·　导出与删除成长档案</p><p>儿童数据由监护人管理。</p></section>`;
+    const pages={home,trend,training,report,profile};
+    function render(page=currentPage,arg){currentPage=page;topTitle.textContent=titles[page];screen.innerHTML=pages[page](arg);document.querySelectorAll('.sl-nav-btn').forEach(b=>b.classList.toggle('active',b.dataset.page===page));document.querySelectorAll('.sl-app-tab').forEach(b=>b.classList.toggle('active',b.dataset.jump===page));bindApp();}
+    function bindApp(){document.querySelector('#sl-pressure-open')?.addEventListener('click',()=>screen.insertAdjacentHTML('beforeend',`<div class="sl-modal"><div class="sl-modal-box"><button class="sl-close">×</button><h3>足底分区负荷</h3><p>左 / 右：后跟 56% / 55%，中足 10% / 11%，前掌 30% / 30%，脚趾 4% / 4%。</p><p>区域负荷用于个人趋势观察，不构成足部疾病判断。</p></div></div>`));document.querySelector('.sl-close')?.addEventListener('click',e=>e.target.closest('.sl-modal').remove());document.querySelectorAll('[data-range]').forEach(b=>b.addEventListener('click',()=>render('trend',b.dataset.range)));document.querySelector('#sl-training-start')?.addEventListener('click',()=>{let n=10;clearInterval(timer);timer=setInterval(()=>{n--;const t=document.querySelector('#sl-timer');if(t)t.textContent='00:'+String(Math.max(n,0)).padStart(2,'0');if(n<=0){clearInterval(timer);if(t)t.textContent='已完成 ✓'}},1000)});document.querySelector('#sl-report-generate')?.addEventListener('click',e=>{e.target.textContent='正在生成…';setTimeout(()=>document.querySelector('#sl-report-result').innerHTML='<div class="sl-report-ready">✓ 示例报告已生成，可用于查看与继续记录。</div>',500)});}
+    document.querySelectorAll('.sl-nav-btn').forEach(b=>b.addEventListener('click',()=>render(b.dataset.page)));document.querySelectorAll('.sl-app-tab').forEach(b=>b.addEventListener('click',()=>render(b.dataset.jump)));render();
 
-  <div class="toast" role="status" aria-live="polite"></div>
-  <script src="script.js"></script>
+    /* Complete compact prototype: five in-app pages and all requested local interactions. */
+    const appBadge='<span class="sl-sample">示例数据</span>';
+    pages.home=()=>`${appBadge}<div class="sl-status">● 已连接　鞋垫 82% <span>今天 18:42 已同步</span></div><section class="sl-card sl-quality"><h4>今日数据概览</h4><div class="sl-grid"><div class="sl-metric"><b>2小时18分</b>有效佩戴</div><div class="sl-metric"><b>7,842 步</b>有效步态周期</div><div class="sl-metric"><b>92%</b>数据完整度</div><div class="sl-metric"><b>记录充分</b>当前记录质量</div></div><p>先判断记录是否完整，再进行趋势分析。</p></section><section class="sl-card"><h4>今日核心观察</h4><div class="sl-grid"><div class="sl-metric"><b>48.7% / 51.3%</b>左右总体负荷</div><div class="sl-metric"><b>+2.1%</b>中足接触趋势</div><div class="sl-metric"><b>整体平稳</b>步态节律稳定性</div><div class="sl-metric"><b>4.8%</b>前足推进差异</div></div></section><section class="sl-card"><h4>今日足底压力 <button class="sl-action" id="sl-pressure-open">查看详情</button></h4><div class="sl-pressure"><div class="sl-foot" title="左脚：后跟、中足、前掌、脚趾"></div><div class="sl-foot" title="右脚：后跟、中足、前掌、脚趾"></div></div><p>点击查看左右分区负荷与个人 30 日基线比较。</p></section><section class="sl-card"><h4>今日系统解读</h4><p>今日整体记录稳定。右侧前足负荷较近期水平略高，当前尚未形成持续趋势，建议继续观察。</p></section><section class="sl-card"><h4>今日提醒</h4><p>✓ 有效佩戴时长已达到建议观察时长。</p></section>`;
+    pages.trend=(range='7天')=>{const data={"7天":['49.0','49.8','48.4','48.9','47.8','49.7','48.7'],"30天":['48.6','49.1','48.8','49.4','48.7','49.0','48.7'],"90天":['48.9','49.0','48.8','48.6','49.1','48.9','48.7']}[range];return `${appBadge}<div class="sl-range"><button class="${range==='7天'?'active':''}" data-range="7天">7天</button><button class="${range==='30天'?'active':''}" data-range="30天">30天</button><button class="${range==='90天'?'active':''}" data-range="90天">90天</button></div><section class="sl-card"><h4>左右负荷趋势 · ${range}</h4><svg class="sl-chart" viewBox="0 0 300 112" aria-label="左右负荷趋势"><path d="M7 72 C32 52 48 84 72 60 S115 44 142 65 S195 82 220 57 S265 42 294 58" stroke="#e9a0ba" stroke-width="4"/><path d="M7 45 C35 64 52 37 78 54 S116 76 143 50 S190 37 222 66 S266 72 294 48" stroke="#9188d7" stroke-width="4"/>${data.map((v,i)=>`<circle cx="${15+i*45}" cy="${66-i%3*8}" r="5" fill="#e9a0ba"><title>第${i+1}天 左脚 ${v}%</title></circle>`).join('')}</svg><p>粉色：左脚　紫色：右脚。悬停数据点可查看日期与数值。</p></section><section class="sl-card"><h4>中足接触趋势</h4><div class="sl-grid"><div class="sl-metric"><b>+2.1%</b>较个人 30 日基线</div><div class="sl-metric"><b>处于个人基线范围</b>当前状态</div></div><p>用于长期观察足弓区域相对承重变化，不单独构成医学判断。</p></section><section class="sl-card"><h4>步态节律</h4><div class="sl-grid"><div class="sl-metric"><b>146 步/分钟</b>平均步频</div><div class="sl-metric"><b>61%</b>支撑相占比</div><div class="sl-metric"><b>3.2%</b>左右支撑时间差</div><div class="sl-metric"><b>较低</b>周期波动</div></div></section><section class="sl-card"><h4>左右对称性</h4><div class="sl-bars"><div class="sl-bar"><span>总体负荷</span><i style="--v:52%"></i><b>2.6%</b></div><div class="sl-bar"><span>支撑时间</span><i style="--v:44%"></i><b>3.2%</b></div><div class="sl-bar"><span>前足推进</span><i style="--v:58%"></i><b>4.8%</b></div></div></section><section class="sl-card"><h4>趋势解读</h4><p>最近 ${range} 左右负荷差异整体较小，短时波动尚未形成持续趋势，建议保持记录。</p></section>`};
+    pages.training=()=>`${appBadge}<section class="sl-card sl-training"><h4>今天，陪孩子动一动</h4><p>简单、轻量的日常活动，建立足部活动、平衡与身体协调习惯。</p><div class="sl-grid"><div class="sl-metric"><b>待完成</b>今日状态</div><div class="sl-metric"><b>3 次</b>本周完成</div></div></section><section class="sl-card"><h4>今日推荐 · 单脚平衡</h4><p>30 秒 × 2 组。站在平整、防滑地面，双手自然张开，家长在旁保护。</p><button class="sl-action" id="sl-training-start">开始 10 秒演示</button><div class="sl-timer" id="sl-timer">00:10</div></section><section class="sl-card"><h4>训练分类</h4><p>足部激活　·　平衡协调　·　踝足活动　·　趣味活动</p></section><section class="sl-card sl-feedback"><h4>今天的活动已记录</h4><p>选择孩子的主观感受：</p><button data-feel="轻松">轻松</button><button data-feel="适中">适中</button><button data-feel="有些吃力">有些吃力</button><button data-feel="出现不适">出现不适</button><p id="sl-feel-result"></p></section>`;
+    pages.report=()=>`${appBadge}<section class="sl-card"><h4>第 28 周成长观察报告</h4><div class="sl-grid"><div class="sl-metric"><b>6 天</b>有效佩戴天数</div><div class="sl-metric"><b>89%</b>数据完整度</div><div class="sl-metric"><b>2.2%</b>总体负荷差异</div><div class="sl-metric"><b>3 次</b>训练完成</div></div></section><section class="sl-card"><h4>本周成长时间轴</h4><p>周一 · 建立本周有效基线<br>周三 · 右侧前足负荷轻微上升<br>周五 · 完成一次训练<br>周六 · 活动量增加<br>周日 · 负荷变化回落</p></section><section class="sl-card"><h4>本周总结</h4><p>记录较完整。周末活动量增加后出现短时变化，次日已回落；目前尚未形成持续变化。</p></section><section class="sl-card"><h4>下一步建议</h4><p>保持规律佩戴；注意鞋码与鞋内空间；可完成 2–3 次轻量平衡活动；如出现持续不适，可咨询专业人员。</p></section><button class="sl-action" id="sl-report-generate">生成成长报告</button><div id="sl-report-result"></div><p style="font-size:9px;color:#878298">报告仅用于家庭记录或专业咨询参考，不构成医学诊断。</p>`;
+    pages.profile=()=>`${appBadge}<section class="sl-card"><h4>儿童档案</h4><div class="sl-grid"><div class="sl-metric"><b>小步</b>姓名</div><div class="sl-metric"><b>7 岁</b>年龄</div><div class="sl-metric"><b>132 cm</b>身高</div><div class="sl-metric"><b>29 kg</b>体重</div></div><p>个人 30 日基线基于连续有效记录形成，可减少个体差异带来的误判。</p></section><section class="sl-card"><h4>设备信息</h4><p>StepLAB 智能鞋垫　·　已连接<br>电量 82%　·　今天 18:42 最近同步<br>固件版本：V1.0</p></section><section class="sl-card"><h4>数据与隐私</h4><p>监护人授权　·　数据授权管理　·　数据导出<br>删除成长档案　·　设备解绑　·　隐私说明</p><p>儿童数据由监护人管理。</p></section>`;
+    function bindApp(){document.querySelector('#sl-pressure-open')?.addEventListener('click',()=>{screen.insertAdjacentHTML('beforeend',`<div class="sl-modal"><div class="sl-modal-box"><button class="sl-close">×</button><h3>足底分区负荷</h3><p>左脚 / 右脚：后跟 56% / 55%，中足 10% / 11%，前掌 30% / 30%，脚趾 4% / 4%。</p><p>当前数据质量：记录充分；与个人 30 日基线比较：基本稳定。</p><p>区域负荷用于个人趋势观察，不构成足部疾病判断。</p></div></div>`);document.querySelector('.sl-close').onclick=e=>e.target.closest('.sl-modal').remove()});document.querySelectorAll('[data-range]').forEach(b=>b.onclick=()=>render('trend',b.dataset.range));document.querySelector('#sl-training-start')?.addEventListener('click',()=>{let n=10;clearInterval(timer);timer=setInterval(()=>{const t=document.querySelector('#sl-timer');if(t)t.textContent='00:'+String(n).padStart(2,'0');if(n--<=0){clearInterval(timer);if(t)t.textContent='已完成 ✓'}},1000)});document.querySelectorAll('[data-feel]').forEach(b=>b.onclick=()=>{const out=document.querySelector('#sl-feel-result');out.textContent=b.dataset.feel==='出现不适'?'建议暂停该动作；如不适持续，请咨询专业人员。':'已记录：'+b.dataset.feel});document.querySelector('#sl-report-generate')?.addEventListener('click',e=>{e.textContent='正在生成…';setTimeout(()=>document.querySelector('#sl-report-result').innerHTML='<div class="sl-report-ready">✓ 示例报告已生成，可用于查看与继续记录。</div>',450)});}
+    render('home');
+
+    pages.home=()=>`${appBadge}<section class="sl-v3-hero"><h4>今日记录状态</h4><div class="sl-ring"><b>92%</b><span>记录充分</span></div><div class="sl-v3-meta"><span><b>6h 18m</b>有效佩戴</span><span><b>7,842</b>有效步态</span><span><b>正常</b>左右同步</span></div></section><p class="sl-v3-insight">今日记录较完整，可用于趋势比较。</p><section class="sl-card"><h4>今日观察</h4><div class="sl-observe"><i class="sl-ob-icon">↔</i><div><b>左右总体负荷</b><small>右侧略高 2.6%</small></div><div><b>48.7% / 51.3%</b><span class="sl-mirror"><i></i><i></i></span></div></div><div class="sl-observe"><i class="sl-ob-icon">⌁</i><div><b>中足接触趋势</b><small>较个人30日基线</small></div><svg class="sl-mini" viewBox="0 0 65 25"><path d="M2 19 C12 15 17 21 28 12 S46 4 63 8" stroke="#d9869f" stroke-width="2" fill="none"/></svg></div><div class="sl-observe"><i class="sl-ob-icon">∿</i><div><b>步态节律</b><small>整体平稳</small></div><svg class="sl-mini" viewBox="0 0 65 25"><path d="M2 14 C9 3 16 23 23 12 S37 2 45 13 S55 22 63 10" stroke="#a99bda" stroke-width="2" fill="none"/></svg></div><div class="sl-observe"><i class="sl-ob-icon">·</i><div><b>前足推进</b><small>左右差异 4.8%</small></div><svg class="sl-mini" viewBox="0 0 65 25"><circle cx="25" cy="12" r="5" fill="#e9b0bf"/><circle cx="43" cy="12" r="6" fill="#b5aae0"/></svg></div></section><section class="sl-card"><h4>足底压力</h4><div class="sl-pressure-toggle"><button class="active">压力分布</button><button>区域占比</button><button>左右差异</button></div><div class="sl-v3-pressure"><div class="sl-v3-foot"><svg viewBox="0 0 80 130"><path d="M42 4C23 6 16 32 17 59c1 22-13 42 2 61 10 12 38 8 43-11 6-25-8-37-4-59C63 28 58 3 42 4Z" fill="#f4edf5"/><ellipse cx="38" cy="91" rx="18" ry="20" fill="#e7afbd"/><ellipse cx="40" cy="56" rx="12" ry="17" fill="#c8bae6"/><ellipse cx="40" cy="27" rx="13" ry="15" fill="#f1d9a8"/></svg></div><div class="sl-v3-foot"><svg viewBox="0 0 80 130"><path d="M38 4C57 6 64 32 63 59c-1 22 13 42-2 61-10 12-38 8-43-11-6-25 8-37 4-59C17 28 22 3 38 4Z" fill="#f4edf5"/><ellipse cx="42" cy="91" rx="18" ry="20" fill="#e7afbd"/><ellipse cx="40" cy="56" rx="12" ry="17" fill="#c8bae6"/><ellipse cx="40" cy="27" rx="13" ry="15" fill="#f1d9a8"/></svg></div></div><button class="sl-action" id="sl-pressure-open">查看区域详情</button></section>`;
+    pages.trend=(range='7天')=>`${appBadge}<div class="sl-range"><button class="${range==='7天'?'active':''}" data-range="7天">7天</button><button class="${range==='30天'?'active':''}" data-range="30天">30天</button><button class="${range==='90天'?'active':''}" data-range="90天">90天</button></div><section class="sl-card"><h4>左右负荷趋势</h4><svg class="sl-v3-chart" viewBox="0 0 280 160"><rect class="band" x="10" y="52" width="260" height="42" rx="10"/><path d="M12 88 C42 66 55 106 86 74 S128 56 157 72 S207 103 267 63" stroke="#dc8ca5" stroke-width="2.4"/><path d="M12 62 C39 80 59 46 88 67 S125 97 157 60 S205 44 267 83" stroke="#978bd0" stroke-width="2.4"/><line x1="12" y1="122" x2="268" y2="122" stroke="#eee8f0"/><circle cx="267" cy="63" r="4" fill="#dc8ca5"><title>今天 左脚 48.7%</title></circle><circle cx="267" cy="83" r="4" fill="#978bd0"><title>今天 右脚 51.3%</title></circle></svg><p>粉色与薰衣草紫分别表示左右负荷；淡紫区域为个人基线带。</p></section><p class="sl-v3-insight">最近${range}左右负荷差异整体较小，周五出现短时波动，目前未形成持续趋势。</p><section class="sl-card"><h4>左右对称性</h4><div class="sl-v3-sym"><div><span>总体负荷</span><i style="--dot:45%"></i><b>2.6%</b></div><div><span>支撑时间</span><i style="--dot:52%"></i><b>3.2%</b></div><div><span>前足推进</span><i style="--dot:65%"></i><b>4.8%</b></div></div></section>`;
+    pages.report=()=>`${appBadge}<section class="sl-report-cover"><strong>完整度 89%</strong><h4>第28周成长观察报告</h4><p>2026.07.06 — 2026.07.12</p></section><p class="sl-report-summary">本周整体记录稳定。周末活动量增加后，右侧前足负荷出现短时上升，次日已回落，目前未形成持续变化。</p><div class="sl-data-strip"><div><b>6天</b>有效佩戴</div><div><b>89%</b>数据完整度</div><div><b>2.2%</b>负荷差异</div><div><b>3次</b>训练完成</div></div><section class="sl-card"><h4>本周趋势</h4><svg class="sl-v3-chart" viewBox="0 0 280 130"><path d="M10 94 C42 80 58 100 86 69 S130 53 156 76 S212 107 267 47" stroke="#d886a0" stroke-width="2.5"/><path d="M10 71 C42 88 59 56 86 75 S130 96 156 63 S212 47 267 70" stroke="#a79ada" stroke-width="2.5"/><circle cx="214" cy="103" r="4" fill="#e8c17e"><title>周六 活动量增加</title></circle></svg></section><section class="sl-card"><h4>成长时间轴</h4><div class="sl-timeline"><div><b>周一 · 建立本周有效基线</b>本周趋势以连续有效记录为参考。</div><div><b>周三 · 右侧前足负荷轻微上升</b>出现短时变化，继续观察。</div><div><b>周五 · 完成一次平衡训练</b>训练记录已保存至成长档案。</div><div><b>周六 · 活动量明显增加</b>负荷随活动变化短时上升。</div><div><b>周日 · 负荷变化回落</b>未形成持续趋势。</div></div></section><section class="sl-card"><h4>下周建议</h4><div class="sl-tags"><span>保持记录</span><span>关注鞋码</span><span>继续轻量训练</span></div></section><button class="sl-action" id="sl-report-generate">生成成长报告</button><div id="sl-report-result"></div>`;
+    render('home');
+    const faqContent=[
+      ['StepLAB 主要记录哪些数据？','StepLAB 通过鞋垫内的压力传感器与 IMU，记录足底不同区域的受力、左右负荷差异、步态节律、支撑时间和日常佩戴情况，并将多次记录整理为可比较的长期趋势。<br><br>产品重点观察一段时间内的变化，而不是仅凭一次测量得出结论。'],
+      ['一次检测就能判断孩子的足部情况吗？','不能。<br><br>单次数据可能受到鞋型、运动量、佩戴位置和当天状态影响。StepLAB 会先判断数据是否完整，再结合个人基线和多次记录观察趋势。<br><br>单次波动不会直接被解释为足部异常。'],
+      ['StepLAB 可以诊断扁平足或足外翻吗？','不可以。<br><br>StepLAB 用于记录足底压力与步态变化趋势，不替代医生、康复治疗师或专业机构的检查与诊断。<br><br>当某项变化持续出现，或孩子同时有疼痛、活动受限、明显跛行等表现时，系统会建议家长进一步咨询专业人员。'],
+      ['StepLAB 能预防足部疾病吗？','StepLAB 不直接承诺预防某种疾病。<br><br>它的价值在于帮助家长更早注意持续、重复或逐渐扩大的变化，减少值得关注的问题长期未被发现的可能，并为后续专业评估提供更连续的日常数据参考。'],
+      ['孩子需要每天佩戴多久？','不要求全天佩戴。<br><br>为了形成可比较的趋势，建议在日常步行、上学或活动场景中保持相对稳定的使用习惯。App 会显示有效佩戴时长和数据完整度，记录不足时不会贸然生成趋势判断。<br><br>具体佩戴建议以后续产品说明为准。'],
+      ['不同鞋子都可以使用吗？','StepLAB 主要适配鞋内空间相对稳定的日常鞋和运动鞋。<br><br>鞋子过紧、鞋底过软、鞋垫容易滑动，都会影响舒适度和数据稳定性。首次使用时，应确认鞋码合适、鞋垫平整放置且没有明显挤压。<br><br>更换鞋型后，系统可能需要重新建立短期参考记录。'],
+      ['如果 App 提示“持续变化”，家长应该怎么做？','先不要自行下结论。<br><br>可以继续保持一段时间的有效记录，同时观察孩子是否出现疼痛、疲劳、活动受限或明显走路变化。<br><br>如果趋势持续存在，或同时伴随明显不适，建议携带成长报告咨询专业人员。'],
+      ['App 里的辅助训练是治疗方案吗？','不是。<br><br>训练模块提供的是低风险、通用型的足部活动、平衡与协调练习，用于帮助家庭建立规律活动习惯和记录儿童的主观感受。<br><br>如果孩子已有明确诊断、正在接受康复治疗，或训练时出现疼痛和明显不适，应遵循专业人员建议。'],
+      ['数据会不会因为孩子跑跳而不准确？','跑跳、鞋垫位移和设备同步不足都可能影响记录质量。<br><br>StepLAB 会对有效步态、左右同步、佩戴时长和数据完整度进行判断。数据质量不足时，App 会提示继续记录或重新调整鞋垫，而不会直接输出趋势结论。']
+    ];
+    const faqList=document.querySelector('.faq-list');
+    if(faqList)faqList.innerHTML=faqContent.map(([q,a],i)=>`<details${i===0?' open':''}><summary>${q}</summary><p>${a}</p></details>`).join('');
+  </script>
 </body>
 </html>
